@@ -27,6 +27,7 @@ define([
          * {@inheritdoc}
          */
         render: function () {
+            if (this.getFormData().code === 'csv_published_product_export' || this.getFormData().code === 'xlsx_published_product_export') return this;
             BaseField.prototype.render.apply(this, arguments);
 
             this.$('.switch').bootstrapSwitch();
